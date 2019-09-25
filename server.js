@@ -5,6 +5,10 @@ app.get('/', function (req, res) {
   res.send('Hello World!')
 })
 
+app.get('/hello', function (req, res) {
+    res.send('Quel est votre nom ?')
+  })
+
 app.listen(process.env.PORT, function () {
-  console.log('Example app listening on port' + process.env.PORT)
+  console.log('Example app listening on port')
 })
