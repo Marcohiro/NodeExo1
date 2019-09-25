@@ -7,6 +7,7 @@ app.get('/', function (req, res) {
 
 app.get('/hello', function (req, res) {
     res.send('Quel est votre nom ?')
+    res.send(req.params.name)
   })
 
 app.listen(process.env.PORT, function () {
