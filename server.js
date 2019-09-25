@@ -16,7 +16,7 @@ app.get('/hello', function (req, res) {
   })
 
 app.post('/chat', function(req, res){
-    if(req.body != null) {
+    if(req.body) {
         if (req.body.msg == "ville") {
             res.send("Nous sommes à Paris")
         } else if(req.body.msg == "météo"){
