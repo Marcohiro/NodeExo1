@@ -7,12 +7,13 @@ app.get('/', function (req, res) {
 
 app.get('/hello', function (req, res) {
     res.send('Quel est votre nom ?')
-    if(req.params.nom == 'Sasha' || req.params.nom == 'Sasha') res.send ('Bonjour ' + req.params.nom)
-    else{
+    if(req.query.nom != "") {
+        res.send ('Bonjour ' + req.query.nom)
+    }else{
         res.send('Quel est votre prenom?')
     }
   })
 
-app.listen(process.env.PORT, function () {
+app.listen(process.env.PORT || 3000, function () {
   console.log('Example app listening on port')
 })
