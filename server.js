@@ -6,7 +6,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/hello', function (req, res) {
-    if(req.query.nom != "") {
+    if(req.query.nom != null) {
         res.send ('Bonjour, ' + req.query.nom)
     }else{
         res.send('Quel est votre prenom?')
